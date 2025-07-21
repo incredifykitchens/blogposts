@@ -47,6 +47,28 @@
             margin-bottom: 20px;
             display: none;
         }
+
+        @media (max-width: 768px) {
+    .container-fluid.px-0 {
+        margin-top: 0 !important;
+    }
+    
+    /* Adjust hero text position to account for navbar */
+    .hero-text {
+        top: 60%; /* Adjust this value as needed */
+    }
+}
+
+/* Add this to your main CSS */
+.row.justify-content-center.mx-0 {
+    margin-top: 0;
+}
+
+/* Ensure the container has no extra padding */
+.container-fluid.px-0 {
+    padding-top: 0;
+}
+
         
         .card:hover {
             transform: translateY(-5px);
