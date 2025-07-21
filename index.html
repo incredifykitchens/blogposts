@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogposts | Incredify Kitchens | Ceramic wares for your kitchens</title>
+    <meta name="description" content="Discover why Incredify Kitchens is the perfect solution for your ceramic kitchenware needs. Explore our premium collection of mugs, cups, dinnerware, and more for your modern kitchen.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Place this in the <head> section of your HTML -->
+<link rel="shortcut icon" href="Logo.png" type="image/png">
+<link rel="icon" href="Logo.png" type="image/png">
+
+<!-- For Apple devices -->
+<link rel="apple-touch-icon" href="Logo.png">
+<!-- For Windows Metro -->
+<meta name="msapplication-TileImage" content="Logo.png">
+    
+    <style>
+        :root {
+            --primary-blue: #4a6fa5;
+            --light-purple: #a78bfa;
+            --white-smoke: #f5f5f5;
+            --dark-blue: #1e3a8a;
+        }
+
+                .navbar-custom {
+            background-color: #e6e8fa; /* Light bluish purple */
+        }
+        
+        body {
+            background-color: var(--white-smoke);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card-footer {
+            background-color: white;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .view-count {
+            color: var(--dark-blue);
+            font-size: 0.9rem;
+        }
+        
+        .btn-read {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-read:hover {
+            background-color: var(--dark-blue);
+            color: white;
+        }
+        
+        .btn-view-more {
+            background-color: var(--light-purple);
+            color: white;
+            margin: 30px auto;
+            display: block;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 50px;
+        }
+        
+        .btn-view-more:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        
+        h1 {
+            color: var(--dark-blue);
+            text-align: center;
+            margin: 30px 0;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 767px) {
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .hero-image {
+            width: 90%;
+            height: 400px;
+            object-fit: cover;
+            position: relative;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 90%;
+        }
+
+            @media (max-width: 768px) {
+            .hero-image {
+                height: 300px;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2">
+        <div class="container">
+            <a class="navbar-brand" href="https://incredifykitchens.in">
+                <img src="Logo.png" alt="INCREDIFY Logo" width="80" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://incredifykitchens.in">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://incredifykitchens.in/collections/trendy-coffee-milk-mugs-beautiful-ceramic-cups-for-daily-use">Coffee Mugs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://incredifykitchens.in/collections/stylish-ceramic-tea-cups-perfect-for-gifting-home">Cups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://incredifykitchens.in/collections/modern-ceramic-dinnerware-for-everyday-elegance">Dinnerware</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://incredifykitchens.in/collections/beautiful-ceramic-jars-elegant-for-modern-day-kitchens">Bowls & Jars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://incredifykitchens.in/collections/serving-platter-for-snacks-sweets-starters">Platters</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-pencil-square me-1"></i>
+                            <b>Blogs</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4 px-0">
+    <div class="row justify-content-center mx-0">
+        <div class="col-12 col-lg-10 px-0 position-relative"> <!-- Changed width to 90% on large screens -->
+            <img src="https://cdn.shopify.com/s/files/1/0931/8917/7628/files/Picture_blog_main_page.png?v=1753087536" alt="Ceramic Kitchenware" class="hero-image w-100 rounded">
+            <div class="hero-text">
+                <h1 class="display-2"></h1>
+                <p class="lead"></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        
+        <h1>Blogposts | Incredify Kitchens</h1>
+        
+        <div class="row" id="blogContainer">
+            <!-- Blog Card 1 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="1">
+                    <img src="https://cdn.shopify.com/s/files/1/0931/8917/7628/files/Ceramic_tableware.jpg?v=1753084896" class="card-img-top" alt="Ceramic Kitchenware">
+                    <div class="card-body">
+                        <h5 class="card-title">Why You Should Buy Ceramic Kitchenware</h5>
+                        <p class="card-text">Discover the elegance and practicality of ceramic kitchenware. From even heat distribution for perfect cooking to toxin-free, eco-friendly materials, ceramic pieces elevate your culinary experience while adding timeless style to your kitchen.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="1_seen">0</span> views</span>
+                        <button class="btn-read" id="1_clicked" onclick="window.location.href='https://incredifykitchens.github.io/blogposts/'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 2 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="2">
+                    <img src="https://cdn.shopify.com/s/files/1/0931/8917/7628/files/Ceramic_kitchenware_blog_2.png?v=1753005613" class="card-img-top" alt="Ceramic Mugs">
+                    <div class="card-body">
+                        <h5 class="card-title">Which Kitchenware Should Actually Live in Your Kitchen?</h5>
+                        <p class="card-text">Confused about what kitchenware to use? We compare ceramic, steel, plastic, glass, opalware, and bone china across durability, safety, and aesthetics—so you can choose wisely.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="2_seen">0</span> views</span>
+                        <button class="btn-read" id="2_clicked" onclick="window.location.href='https://incredifykitchens.github.io/blogposts/Why_Ceramic_Ware_is_the_best_kitchenware_for_your_home.html'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 3 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="3">
+                    <img src="https://cdn.shopify.com/s/files/1/0931/8917/7628/files/Cloud_Kitchen.png?v=1753091532" class="card-img-top" alt="Ceramic Jars">
+                    <div class="card-body">
+                        <h5 class="card-title">Should You Open A Cloud Kitchen Business?</h5>
+                        <p class="card-text"> 
+                            Our article explores realistic cost estimates for starting a  cloud kitchen in Gurgaon, showing how much investment you need & how you can begin operations and aim for break-even.Read this article if you are thinking of setting up your own cloud kitchen.
+</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="3_seen">0</span> views</span>
+                        <button class="btn-read" id="3_clicked" onclick="window.location.href='https://incredifykitchens.github.io/blogposts/CloudKitchen_IncredifyKitchens_How_to_set_up.html#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 4 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="4">
+                    <img src="https://source.unsplash.com/random/600x400/?tea,cup,4" class="card-img-top" alt="Tea Cups">
+                    <div class="card-body">
+                        <h5 class="card-title">The Perfect Tea Cup: Ceramic vs Porcelain</h5>
+                        <p class="card-text">A comprehensive comparison to help you decide which material suits your tea-drinking habits best.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="4_seen">0</span> views</span>
+                        <button class="btn-read" id="4_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 5 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="5">
+                    <img src="https://source.unsplash.com/random/600x400/?platter,food,5" class="card-img-top" alt="Serving Platters">
+                    <div class="card-body">
+                        <h5 class="card-title">Elevate Your Entertaining with Ceramic Serving Platters</h5>
+                        <p class="card-text">Tips and tricks for hosting memorable gatherings with our elegant ceramic serving platters.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="5_seen">0</span> views</span>
+                        <button class="btn-read" id="5_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 6 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="6">
+                    <img src="https://source.unsplash.com/random/600x400/?bowl,salad,6" class="card-img-top" alt="Ceramic Bowls">
+                    <div class="card-body">
+                        <h5 class="card-title">Ceramic Bowls: The Unsung Heroes of Your Kitchen</h5>
+                        <p class="card-text">Discover the versatility of ceramic bowls for everything from breakfast to dinner and meal prep.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="6_seen">0</span> views</span>
+                        <button class="btn-read" id="6_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 7 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="7">
+                    <img src="https://source.unsplash.com/random/600x400/?dinnerware,set,7" class="card-img-top" alt="Dinnerware Sets">
+                    <div class="card-body">
+                        <h5 class="card-title">Building the Perfect Ceramic Dinnerware Set</h5>
+                        <p class="card-text">A guide to selecting and mixing pieces to create a dinnerware set that reflects your personal style.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="7_seen">0</span> views</span>
+                        <button class="btn-read" id="7_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 8 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="8">
+                    <img src="https://source.unsplash.com/random/600x400/?coffee,breakfast,8" class="card-img-top" alt="Morning Routine">
+                    <div class="card-body">
+                        <h5 class="card-title">Morning Rituals: Starting Your Day with Ceramic Ware</h5>
+                        <p class="card-text">How incorporating ceramic mugs and bowls into your morning routine can enhance your whole day.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="8_seen">0</span> views</span>
+                        <button class="btn-read" id="8_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 9 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="9">
+                    <img src="https://source.unsplash.com/random/600x400/?gift,box,9" class="card-img-top" alt="Ceramic Gifts">
+                    <div class="card-body">
+                        <h5 class="card-title">Ceramic Kitchenware: The Thoughtful Gift That Lasts</h5>
+                        <p class="card-text">Why ceramic kitchen items make perfect gifts for weddings, housewarmings, and special occasions.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="9_seen">0</span> views</span>
+                        <button class="btn-read" id="9_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 10 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="10">
+                    <img src="https://source.unsplash.com/random/600x400/?colorful,ceramic,10" class="card-img-top" alt="Colorful Ceramics">
+                    <div class="card-body">
+                        <h5 class="card-title">Color Psychology in Ceramic Kitchenware</h5>
+                        <p class="card-text">How the colors of your ceramic items can influence your mood and eating habits.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="10_seen">0</span> views</span>
+                        <button class="btn-read" id="10_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 11 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="11">
+                    <img src="https://source.unsplash.com/random/600x400/?minimalist,kitchen,11" class="card-img-top" alt="Minimalist Kitchen">
+                    <div class="card-body">
+                        <h5 class="card-title">Minimalist Kitchen Design with Ceramic Accents</h5>
+                        <p class="card-text">Achieving a clean, minimalist kitchen look with carefully selected ceramic pieces.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="11_seen">0</span> views</span>
+                        <button class="btn-read" id="11_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Card 12 -->
+            <div class="col-md-6 col-lg-6">
+                <div class="card" id="12">
+                    <img src="https://source.unsplash.com/random/600x400/?baking,ceramic,12" class="card-img-top" alt="Baking with Ceramics">
+                    <div class="card-body">
+                        <h5 class="card-title">The Benefits of Baking with Ceramic Cookware</h5>
+                        <p class="card-text">Why professional chefs and home bakers alike prefer ceramic for even heating and perfect results.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-count"><i class="bi bi-eye"></i> <span id="12_seen">0</span> views</span>
+                        <button class="btn-read" id="12_clicked" onclick="window.location.href='#'">Read Here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="btn btn-view-more" id="viewMoreBtn">View More</button>
+    </div>
+
+    <div class="container-fluid bg-dark text-light py-3" style="margin-top: 18px;">
+    <!-- Top navigation links -->
+    <div class="d-flex justify-content-around flex-wrap mb-3">
+        <a href="https://incredifykitchens.in/pages/about-us-incredifykitchens" class="text-light mx-3 mb-2 text-decoration-none">About Us</a>
+        <a href="https://incredifykitchens.in/pages/contact" class="text-light mx-3 mb-2 text-decoration-none">Contact</a>
+        <a href="https://incredifykitchens.in/pages/shipping-policy" class="text-light mx-3 mb-2 text-decoration-none">Shipping</a>
+        <a href="https://incredifykitchens.in/pages/refund-exchange-policy" class="text-light mx-3 mb-2 text-decoration-none">Refunds</a>
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-light">
+
+    <!-- Logo and Contact Info -->
+    <div class="container">
+        <div class="row text-center text-md-start align-items-center justify-content-around">
+            <!-- Logo -->
+           <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+            <a href="https://incredifykitchens.in">
+                <img src="Logo.png" alt="Incredify Kitchens Logo" class="img-fluid rounded-circle" style="max-width: 200px;">
+            </a>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-12 col-md-6 text-light">
+                <h5 class="fw-bold mb-3">Contact Info</h5>
+                <p class="mb-1">
+                    <i class="bi bi-envelope-fill me-2"></i> incredifytechnologies@gmail.com
+                </p>
+                <p class="mb-1">
+                    <i class="bi bi-house-fill me-2"></i> B 451 Second Floor Sudershan Park<br>New Delhi 110015
+                </p>
+                <p class="mb-1">
+                    <i class="bi bi-telephone-fill me-2"></i> +918802054865
+                </p>
+                <!-- Instagram Icon -->
+                <a href="https://instagram.com/yourhandle" target="_blank" class="text-light fs-4 mt-2 d-inline-block">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <hr class="border-light">
+    </div>
+</div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // JSON repository for view counts
+        const viewCounts = {
+            "1_seen": Math.floor(Math.random() * 600) + 400,
+            "2_seen": Math.floor(Math.random() * 600) + 400,
+            "3_seen": Math.floor(Math.random() * 600) + 400,
+            "4_seen": Math.floor(Math.random() * 600) + 400,
+            "5_seen": Math.floor(Math.random() * 600) + 400,
+            "6_seen": Math.floor(Math.random() * 600) + 400,
+            "7_seen": Math.floor(Math.random() * 600) + 400,
+            "8_seen": Math.floor(Math.random() * 600) + 400,
+            "9_seen": Math.floor(Math.random() * 600) + 400,
+            "10_seen": Math.floor(Math.random() * 600) + 400,
+            "11_seen": Math.floor(Math.random() * 600) + 400,
+            "12_seen": Math.floor(Math.random() * 600) + 400
+        };
+        
+        // Global variable to track visible cards
+        let visibleCards = 0;
+        
+        // Function to display cards
+        function displayCards(start, end) {
+            for (let i = start; i <= end; i++) {
+                const card = document.getElementById(i.toString());
+                if (card) {
+                    card.style.display = 'block';
+                    
+                    // Increment view count in JSON and update display
+                    const seenId = i + '_seen';
+                    viewCounts[seenId] += 1;
+                    document.getElementById(seenId).textContent = viewCounts[seenId];
+                }
+            }
+            visibleCards = end;
+        }
+        
+        // Initial load - display first 10 cards
+        document.addEventListener('DOMContentLoaded', function() {
+            displayCards(1, 3);
+        });
+        
+        // View More button functionality
+        document.getElementById('viewMoreBtn').addEventListener('click', function() {
+            const nextStart = visibleCards + 1;
+            const nextEnd = Math.min(visibleCards + 1, 12); // Change 12 to a higher number if you add more cards
+            
+            if (nextStart <= 3) { // Change 12 to match your total number of cards
+                displayCards(nextStart, nextEnd);
+                
+                // Hide button if all cards are displayed
+                if (nextEnd >= 3) { // Change 12 to match your total number of cards
+                    this.style.display = 'none';
+                }
+            }
+        });
+        
+        // Handle click events for all read buttons
+        for (let i = 1; i <= 12; i++) {
+            const button = document.getElementById(i + '_clicked');
+            if (button) {
+                button.addEventListener('click', function() {
+                    // You can add additional tracking here if needed
+                    window.location.href = '#'; // Replace with actual link
+                });
+            }
+        }
+    </script>
+</body>
+</html>
