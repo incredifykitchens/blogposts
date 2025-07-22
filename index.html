@@ -496,7 +496,7 @@
         
         // Initial load - display first 10 cards
         document.addEventListener('DOMContentLoaded', function() {
-            displayCards(1, 3);
+            displayCards(1, 4);
         });
         
         // View More button functionality
@@ -504,11 +504,11 @@
             const nextStart = visibleCards + 1;
             const nextEnd = Math.min(visibleCards + 1, 12); // Change 12 to a higher number if you add more cards
             
-            if (nextStart <= 3) { // Change 12 to match your total number of cards
+            if (nextStart <= 4) { // Change 12 to match your total number of cards
                 displayCards(nextStart, nextEnd);
                 
                 // Hide button if all cards are displayed
-                if (nextEnd >= 3) { // Change 12 to match your total number of cards
+                if (nextEnd >= 4) { // Change 12 to match your total number of cards
                     this.style.display = 'none';
                 }
             }
