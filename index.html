@@ -292,12 +292,12 @@
                 <div class="card" id="5">
                     <img src="https://source.unsplash.com/random/600x400/?platter,food,5" class="card-img-top" alt="Serving Platters">
                     <div class="card-body">
-                        <h5 class="card-title">Elevate Your Entertaining with Ceramic Serving Platters</h5>
-                        <p class="card-text">Tips and tricks for hosting memorable gatherings with our elegant ceramic serving platters.</p>
+                        <h5 class="card-title">Ceramic Wares, The Best Gifting Option For Every Occassion</h5>
+                        <p class="card-text">Looking for a gift that blends tradition with modern elegance? Ceramic wares are just that. From handcrafted tea sets to charming dinnerware, they offer a personal touch that metal or plastic never can. Ideal for every occasion — from birthdays to anniversaries.</p>
                     </div>
                     <div class="card-footer">
                         <span class="view-count"><i class="bi bi-eye"></i> <span id="5_seen">0</span> views</span>
-                        <button class="btn-read" id="5_clicked" onclick="window.location.href='#'">Read Here</button>
+                        <button class="btn-read" id="5_clicked" onclick="window.location.href='https://blogposts.incredifykitchens.in/ceramic_wares_the_best_gifting_option_for_every_occassion'">Read Here</button>
                     </div>
                 </div>
             </div>
@@ -496,7 +496,7 @@
         
         // Initial load - display first 10 cards
         document.addEventListener('DOMContentLoaded', function() {
-            displayCards(1, 4);
+            displayCards(1, 5);
         });
         
         // View More button functionality
@@ -504,11 +504,11 @@
             const nextStart = visibleCards + 1;
             const nextEnd = Math.min(visibleCards + 1, 12); // Change 12 to a higher number if you add more cards
             
-            if (nextStart <= 4) { // Change 12 to match your total number of cards
+            if (nextStart <= 5) { // Change 12 to match your total number of cards
                 displayCards(nextStart, nextEnd);
                 
                 // Hide button if all cards are displayed
-                if (nextEnd >= 4) { // Change 12 to match your total number of cards
+                if (nextEnd >= 5) { // Change 12 to match your total number of cards
                     this.style.display = 'none';
                 }
             }
