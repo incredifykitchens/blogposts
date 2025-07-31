@@ -687,6 +687,8 @@
 </div>   
 <footer>         
 <div class="container-fluid bg-dark text-light py-3" style="margin-top: 18px;">
+        <div id="footer-links" style="text-align:center; padding: 10px 0;" class="mb-2"></div>
+    <hr class="border-light">
     <!-- Top navigation links -->
     <div class="d-flex justify-content-around flex-wrap mb-3">
         <a href="https://incredifykitchens.in/pages/about-us-incredifykitchens" class="text-light mx-3 mb-2 text-decoration-none">About Us</a>
@@ -775,5 +777,23 @@
             alert(`You have ${Object.keys(CartItems).length} items in your cart.`);
         });
     </script>
+<script>
+  fetch('pages.json')  
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('footer-links');
+      const currentPage = window.location.pathname;
+      let links = '';
+
+      for (const [name, link] of Object.entries(data)) {
+        if (link !== currentPage) {
+          links += `<a href="${link}" style="text-decoration: none; color: inherit; margin: 0 5px;">${name}</a> | `;
+        }
+      }
+
+      // remove last |
+      container.innerHTML = links.slice(0, -3);
+    });
+</script>
 </body>
 </html>
